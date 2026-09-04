@@ -1,0 +1,930 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Cotización para filtro-juego de TikTok para Grupo Secretto, diseñado y desarrollado por WeSpeak para Believe.">
+  <meta name="theme-color" content="#120f0d">
+  <meta name="color-scheme" content="light">
+  <title>Believe · Cotización Filtro TikTok Grupo Secretto</title>
+  <style>
+    :root {
+      --ink: #120f0d;
+      --ink-soft: #211712;
+      --paper: #f6f0e4;
+      --white: #fffaf0;
+      --muted: #73665c;
+      --line: rgba(18, 15, 13, .15);
+      --line-dark: rgba(255, 250, 240, .16);
+      --red: #a92c1f;
+      --red-dark: #6f1d16;
+      --brass: #d7a84d;
+      --cactus: #4f8b64;
+      --denim: #294a66;
+      --content: min(1160px, calc(100vw - 88px));
+      --radius-lg: 28px;
+      --radius-md: 18px;
+      --radius-sm: 12px;
+      --shadow: 0 28px 80px rgba(18, 15, 13, .16);
+      --sans: "Avenir Next", Avenir, Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      --display: Rubik, "Avenir Next", Avenir, Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 92px;
+      background: var(--ink);
+    }
+
+    body {
+      margin: 0;
+      min-width: 280px;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: var(--sans);
+      font-size: 17px;
+      line-height: 1.55;
+      overflow-x: hidden;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; }
+    p, h1, h2, h3, h4 { margin-top: 0; }
+    p:last-child { margin-bottom: 0; }
+
+    ::selection {
+      color: var(--ink);
+      background: var(--brass);
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      min-height: 74px;
+      color: var(--white);
+      background: rgba(18, 15, 13, .92);
+      border-bottom: 1px solid rgba(255, 250, 240, .12);
+      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(18px);
+    }
+
+    .header-inner {
+      width: var(--content);
+      min-height: 74px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      position: relative;
+      flex: 0 0 auto;
+      width: 40px;
+      height: 40px;
+      background: conic-gradient(from 45deg, var(--red), var(--brass), var(--red), var(--denim), var(--red));
+      border: 1px solid rgba(255, 250, 240, .28);
+      border-radius: 50%;
+      box-shadow: inset 0 0 0 7px var(--ink);
+    }
+
+    .brand-mark::after {
+      position: absolute;
+      inset: 13px;
+      content: "";
+      background: var(--white);
+      border-radius: 50%;
+    }
+
+    .brand-copy { display: grid; line-height: 1; }
+
+    .brand-copy strong {
+      font-size: 16px;
+      font-weight: 900;
+      letter-spacing: .055em;
+      text-transform: uppercase;
+    }
+
+    .brand-copy small {
+      margin-top: 5px;
+      color: rgba(255, 250, 240, .58);
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .header-meta {
+      color: rgba(255, 250, 240, .66);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-align: right;
+      text-transform: uppercase;
+    }
+
+    .hero {
+      position: relative;
+      min-height: min(780px, calc(100svh - 74px));
+      padding: 92px 0 66px;
+      display: grid;
+      align-items: center;
+      color: var(--white);
+      background:
+        linear-gradient(120deg, rgba(111, 29, 22, .72), transparent 48%),
+        radial-gradient(circle at 82% 18%, rgba(215, 168, 77, .23), transparent 29%),
+        radial-gradient(circle at 12% 88%, rgba(79, 139, 100, .19), transparent 30%),
+        var(--ink);
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .hero::before {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      content: "";
+      opacity: .25;
+      background-image:
+        repeating-linear-gradient(90deg, transparent 0 22px, rgba(255, 250, 240, .18) 22px 24px, transparent 24px 38px),
+        repeating-linear-gradient(0deg, transparent 0 48px, rgba(215, 168, 77, .16) 48px 50px);
+      mask-image: linear-gradient(to bottom, #000 0%, transparent 88%);
+    }
+
+    .hero::after {
+      position: absolute;
+      right: max(28px, calc((100vw - 1160px) / 2));
+      bottom: 58px;
+      z-index: -1;
+      width: min(420px, 42vw);
+      aspect-ratio: 1;
+      content: "";
+      border: 2px solid rgba(215, 168, 77, .35);
+      border-radius: 50%;
+      background:
+        radial-gradient(circle, transparent 0 18%, rgba(255, 250, 240, .12) 19% 20%, transparent 21% 100%),
+        repeating-conic-gradient(from 0deg, rgba(215, 168, 77, .2) 0 4deg, transparent 4deg 11deg);
+      opacity: .68;
+    }
+
+    .hero-inner, .inner {
+      position: relative;
+      width: var(--content);
+      margin: 0 auto;
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 22px;
+      color: var(--brass);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+    }
+
+    .kicker::before {
+      width: 30px;
+      height: 2px;
+      content: "";
+      background: currentColor;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--display);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      text-wrap: balance;
+    }
+
+    h1 {
+      max-width: 980px;
+      margin-bottom: 28px;
+      font-size: clamp(54px, 8vw, 112px);
+      line-height: .9;
+      letter-spacing: -.065em;
+    }
+
+    h1 em { color: var(--brass); font-style: normal; }
+
+    .hero-lead {
+      max-width: 760px;
+      margin-bottom: 38px;
+      color: rgba(255, 250, 240, .75);
+      font-size: clamp(18px, 2vw, 23px);
+      line-height: 1.5;
+    }
+
+    .hero-facts {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1px;
+      max-width: 970px;
+      border: 1px solid var(--line-dark);
+      border-radius: var(--radius-md);
+      background: var(--line-dark);
+      overflow: hidden;
+    }
+
+    .hero-fact {
+      min-height: 104px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 12px;
+      background: rgba(18, 15, 13, .84);
+    }
+
+    .hero-fact strong { font-size: 22px; line-height: 1; }
+
+    .hero-fact span {
+      color: rgba(255, 250, 240, .55);
+      font-size: 10px;
+      font-weight: 850;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+    }
+
+    .section { position: relative; padding: 104px 0; }
+    .section.dark { color: var(--white); background: var(--ink); }
+    .section.red { color: var(--white); background: var(--red-dark); }
+
+    .eyebrow {
+      margin-bottom: 16px;
+      color: var(--red);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .dark .eyebrow, .red .eyebrow { color: var(--brass); }
+
+    h2 {
+      max-width: 920px;
+      margin-bottom: 24px;
+      font-size: clamp(40px, 6vw, 76px);
+      line-height: .98;
+    }
+
+    .section-lead {
+      max-width: 790px;
+      margin-bottom: 50px;
+      color: var(--muted);
+      font-size: clamp(18px, 2vw, 22px);
+      line-height: 1.58;
+    }
+
+    .dark .section-lead, .red .section-lead { color: rgba(255, 250, 240, .68); }
+
+    .quote-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.12fr) minmax(310px, .88fr);
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .quote-card, .maintenance-card, .deliverable-card, .term {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: var(--white);
+      box-shadow: 0 18px 48px rgba(18, 15, 13, .07);
+    }
+
+    .quote-card {
+      position: relative;
+      padding: 40px;
+      color: var(--white);
+      background:
+        linear-gradient(135deg, rgba(169, 44, 31, .42), transparent 58%),
+        var(--ink-soft);
+      border-color: rgba(215, 168, 77, .42);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .quote-card::after {
+      position: absolute;
+      right: -52px;
+      bottom: -60px;
+      width: 260px;
+      height: 260px;
+      content: "";
+      border-radius: 50%;
+      background:
+        repeating-linear-gradient(90deg, rgba(215, 168, 77, .16) 0 8px, transparent 8px 16px),
+        rgba(255, 250, 240, .05);
+      transform: rotate(-12deg);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 29px;
+      margin-bottom: 28px;
+      padding: 6px 11px;
+      color: var(--ink);
+      background: var(--brass);
+      border-radius: 999px;
+      font-size: 9px;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .option-label {
+      margin-bottom: 9px;
+      color: rgba(255, 250, 240, .52);
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .quote-card h3 {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 18px;
+      font-size: clamp(30px, 4vw, 50px);
+      line-height: 1;
+    }
+
+    .price {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .price strong {
+      font-size: clamp(42px, 5vw, 70px);
+      line-height: 1;
+      letter-spacing: -.055em;
+    }
+
+    .price span {
+      color: rgba(255, 250, 240, .52);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+
+    .feature-list {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 13px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .feature-list li {
+      position: relative;
+      padding-left: 24px;
+      color: rgba(255, 250, 240, .76);
+      font-size: 15px;
+    }
+
+    .feature-list li::before {
+      position: absolute;
+      top: .6em;
+      left: 2px;
+      width: 7px;
+      height: 7px;
+      content: "";
+      background: var(--brass);
+      border-radius: 50%;
+    }
+
+    .maintenance-card {
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .maintenance-card .mini-label {
+      display: inline-block;
+      margin-bottom: 22px;
+      color: var(--red);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .maintenance-card h3 {
+      margin-bottom: 12px;
+      font-size: 31px;
+      line-height: 1.03;
+    }
+
+    .monthly {
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+    }
+
+    .monthly strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--red);
+      font-size: clamp(42px, 5vw, 60px);
+      line-height: 1;
+      letter-spacing: -.055em;
+    }
+
+    .monthly span {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+
+    .scope-note {
+      margin-top: 24px;
+      padding: 16px 18px;
+      color: rgba(255, 250, 240, .62);
+      background: rgba(255, 250, 240, .07);
+      border-radius: var(--radius-sm);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .deliverable-grid, .terms-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .deliverable-card {
+      min-height: 218px;
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .deliverable-card span, .term span {
+      display: block;
+      color: var(--red);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .deliverable-card h3 {
+      margin: 36px 0 10px;
+      font-size: 27px;
+      line-height: 1.05;
+    }
+
+    .deliverable-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .experience {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, .78fr);
+      gap: 44px;
+      align-items: center;
+    }
+
+    .accordion-panel {
+      min-height: 430px;
+      padding: 32px;
+      display: grid;
+      grid-template-columns: 76px 1fr 76px;
+      gap: 24px;
+      align-items: stretch;
+      border: 1px solid var(--line-dark);
+      border-radius: var(--radius-lg);
+      background:
+        radial-gradient(circle at center, rgba(215, 168, 77, .2), transparent 50%),
+        rgba(255, 250, 240, .05);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, .22);
+    }
+
+    .bellows {
+      border: 1px solid rgba(215, 168, 77, .28);
+      border-radius: 14px;
+      background:
+        repeating-linear-gradient(90deg, rgba(255, 250, 240, .16) 0 8px, transparent 8px 18px),
+        linear-gradient(180deg, rgba(169, 44, 31, .58), rgba(18, 15, 13, .1));
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .buttons i {
+      display: block;
+      border: 1px solid rgba(255, 250, 240, .2);
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--white) 0 32%, var(--brass) 33% 58%, var(--red-dark) 60%);
+      box-shadow: inset 0 0 0 5px rgba(18, 15, 13, .36);
+    }
+
+    .screen {
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid rgba(255, 250, 240, .18);
+      border-radius: 20px;
+      background:
+        linear-gradient(180deg, rgba(18, 15, 13, .36), rgba(18, 15, 13, .72)),
+        repeating-linear-gradient(0deg, transparent 0 16px, rgba(215, 168, 77, .08) 16px 18px);
+    }
+
+    .screen strong {
+      color: var(--brass);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    .screen h3 {
+      margin: 24px 0 0;
+      font-size: clamp(35px, 5vw, 60px);
+      line-height: .92;
+    }
+
+    .song-slots {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 7px;
+      margin-top: 28px;
+    }
+
+    .song-slots span {
+      height: 54px;
+      border: 1px solid rgba(215, 168, 77, .36);
+      border-radius: 999px 999px 8px 8px;
+      background: linear-gradient(180deg, var(--brass), rgba(169, 44, 31, .45));
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 1px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: var(--line);
+      overflow: hidden;
+    }
+
+    .phase {
+      min-height: 245px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      background: var(--white);
+    }
+
+    .phase time {
+      margin-bottom: 42px;
+      color: var(--red);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+    }
+
+    .phase h3 { margin-bottom: 11px; font-size: 22px; line-height: 1.08; }
+    .phase p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.5; }
+
+    .terms-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+    .term {
+      padding: 24px;
+      border-radius: var(--radius-md);
+      box-shadow: none;
+    }
+
+    .term h3 {
+      margin: 24px 0 9px;
+      font-size: 21px;
+      letter-spacing: -.025em;
+    }
+
+    .term p { margin: 0; color: var(--muted); font-size: 13px; }
+
+    .cta {
+      color: var(--white);
+      background:
+        linear-gradient(120deg, rgba(169, 44, 31, .5), transparent 54%),
+        var(--ink);
+    }
+
+    .cta-box {
+      padding: 54px;
+      display: grid;
+      gap: 40px;
+      border: 1px solid var(--line-dark);
+      border-radius: var(--radius-lg);
+      background: rgba(255, 250, 240, .045);
+    }
+
+    .cta-box h2 { margin-bottom: 16px; }
+    .cta-box p { max-width: 710px; margin: 0; color: rgba(255, 250, 240, .66); font-size: 17px; }
+
+    .button {
+      min-height: 52px;
+      padding: 0 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ink);
+      background: var(--brass);
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .09em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: transform .2s ease, background .2s ease;
+      touch-action: manipulation;
+    }
+
+    .button:hover { background: var(--white); transform: translateY(-2px); }
+    .button:focus-visible { outline: 3px solid var(--red); outline-offset: 4px; }
+
+    footer {
+      padding: 28px 0 max(28px, env(safe-area-inset-bottom));
+      color: rgba(255, 250, 240, .45);
+      background: var(--ink);
+      border-top: 1px solid rgba(255, 250, 240, .08);
+      font-size: 11px;
+    }
+
+    .footer-inner {
+      width: var(--content);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    @media (max-width: 980px) {
+      :root { --content: min(100% - 48px, 760px); }
+      .hero-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .quote-grid, .experience, .cta-box { grid-template-columns: 1fr; }
+      .deliverable-grid, .terms-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .timeline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .phase:last-child { grid-column: 1 / -1; min-height: 190px; }
+      .button { justify-self: start; }
+    }
+
+    @media (max-width: 640px) {
+      :root { --content: calc(100% - 36px); }
+      body { font-size: 16px; }
+      html { scroll-padding-top: 66px; }
+      .site-header, .header-inner { min-height: 66px; }
+
+      .header-inner {
+        width: auto;
+        margin: 0;
+        padding-left: max(18px, env(safe-area-inset-left));
+        padding-right: max(18px, env(safe-area-inset-right));
+      }
+
+      .brand-mark { width: 34px; height: 34px; box-shadow: inset 0 0 0 6px var(--ink); }
+      .brand-mark::after { inset: 11px; }
+      .brand-copy strong { font-size: 14px; }
+      .brand-copy small { font-size: 8px; }
+      .header-meta { max-width: 130px; font-size: 8px; line-height: 1.35; }
+      .hero { min-height: auto; padding: 70px 0 54px; }
+      .hero::after { width: 260px; right: -72px; bottom: 28px; opacity: .36; }
+      .kicker { margin-bottom: 18px; font-size: 9px; letter-spacing: .14em; }
+
+      h1 {
+        margin-bottom: 22px;
+        font-size: clamp(47px, 15vw, 68px);
+        line-height: .91;
+      }
+
+      .hero-lead { margin-bottom: 30px; font-size: 17px; }
+      .hero-facts { grid-template-columns: 1fr 1fr; border-radius: 17px; }
+      .hero-fact { min-height: 88px; padding: 16px; gap: 8px; }
+      .hero-fact strong { font-size: 18px; }
+      .hero-fact span { font-size: 8px; line-height: 1.35; }
+      .section { padding: 74px 0; }
+      .eyebrow { font-size: 9px; }
+      h2 { margin-bottom: 20px; font-size: clamp(37px, 11vw, 52px); }
+      .section-lead { margin-bottom: 34px; font-size: 17px; }
+      .quote-card, .maintenance-card { padding: 28px 22px; border-radius: 23px; }
+      .quote-card h3 { font-size: 34px; }
+      .price { align-items: flex-end; gap: 8px; }
+      .price strong { font-size: 46px; }
+      .price span { padding-bottom: 4px; font-size: 9px; }
+      .monthly strong { font-size: 46px; }
+      .deliverable-grid, .terms-grid, .timeline { grid-template-columns: 1fr; }
+      .deliverable-card { min-height: 174px; padding: 24px; }
+      .deliverable-card h3 { margin-top: 28px; }
+      .accordion-panel {
+        min-height: 380px;
+        padding: 18px;
+        grid-template-columns: 44px 1fr 44px;
+        gap: 12px;
+      }
+      .buttons { gap: 8px; }
+      .screen { padding: 22px; }
+      .song-slots span { height: 42px; }
+      .timeline { gap: 12px; border: 0; background: transparent; overflow: visible; }
+      .phase, .phase:last-child { min-height: auto; grid-column: auto; border: 1px solid var(--line); border-radius: 18px; }
+      .phase time { margin-bottom: 26px; }
+      .cta-box { padding: 30px 22px; border-radius: 23px; }
+      .button { width: 100%; }
+      .footer-inner { flex-direction: column; gap: 6px; }
+    }
+
+    @media (max-width: 360px) {
+      :root { --content: calc(100% - 28px); }
+      .header-meta { display: none; }
+      .hero-facts { grid-template-columns: 1fr; }
+      h1 { font-size: 43px; }
+      .accordion-panel { grid-template-columns: 32px 1fr 32px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+    }
+
+    @media print {
+      :root { --content: calc(100% - 42px); }
+      html, body { background: #fff; }
+      .site-header { position: static; }
+      .hero { min-height: auto; padding: 52px 0; }
+      .section { padding: 54px 0; break-inside: avoid; }
+      .quote-card, .maintenance-card, .deliverable-card, .phase, .term { break-inside: avoid; }
+      .button { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#inicio" aria-label="Volver al inicio">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-copy"><strong>Believe</strong><small>Cotización por WeSpeak</small></span>
+      </a>
+      <span class="header-meta">Grupo Secretto · Filtro-juego TikTok</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-inner">
+        <span class="kicker">Believe · Cotización comercial · Septiembre 2026</span>
+        <h1>La rola entra.<br><em>El juego</em><br>la hace sonar.</h1>
+        <p class="hero-lead">Diseño y desarrollo de un filtro-juego de TikTok para GRUPO SECRETTO, con dinámica de acordeón, estilo norteño y una canción integrada para convertir el lanzamiento en una experiencia digital ligera y compartible.</p>
+        <div class="hero-facts" aria-label="Datos principales de la cotización">
+          <div class="hero-fact"><strong>$17,000</strong><span>MXN + IVA total</span></div>
+          <div class="hero-fact"><strong>TikTok</strong><span>filtro con dinámica de juego</span></div>
+          <div class="hero-fact"><strong>1 canción</strong><span>integrada al filtro</span></div>
+          <div class="hero-fact"><strong>20 días</strong><span>hábiles aproximados</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="cotizacion">
+      <div class="inner">
+        <p class="eyebrow">Cotización cerrada</p>
+        <h2>Un filtro que funciona como juego y se siente nativo de TikTok.</h2>
+        <p class="section-lead">La inversión cubre concepto visual, diseño, desarrollo del filtro-juego, una ronda de ajustes y entrega del paquete final listo para el flujo de publicación acordado.</p>
+        <div class="quote-grid">
+          <article class="quote-card">
+            <span class="badge">Filtro-juego TikTok</span>
+            <p class="option-label">Inversión total</p>
+            <h3>Juego de acordeón para GRUPO SECRETTO</h3>
+            <div class="price"><strong>$17,000.00</strong><span>MXN + IVA</span></div>
+            <ul class="feature-list">
+              <li>Diseño visual del filtro.</li>
+              <li>Dinámica jugable tipo ACORDEON HERO.</li>
+              <li>Una ronda de ajustes.</li>
+            </ul>
+            <p class="scope-note"><strong>Resumen:</strong> WeSpeak produce una experiencia cerrada para GRUPO SECRETTO como filtro-juego de TikTok. El alcance contempla el diseño y desarrollo del efecto para una canción, no una plataforma de juegos ni pauta de medios.</p>
+          </article>
+
+          <aside class="maintenance-card">
+            <div>
+              <span class="mini-label">Entrega incluida</span>
+              <h3>Filtro listo en 20 días hábiles aproximados.</h3>
+              <p>El calendario corre a partir de la aprobación de la cotización y recepción de materiales necesarios: canción, referencias del grupo, lineamientos visuales y assets requeridos para el filtro.</p>
+            </div>
+            <div class="monthly">
+              <strong>20 días</strong>
+              <span>aproximados después de aprobación</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="experiencia">
+      <div class="inner experience">
+        <div>
+          <p class="eyebrow">Dirección creativa</p>
+          <h2>Un filtro con sabor norteño, hecho para que la canción viva dentro de la dinámica.</h2>
+        </div>
+        <div class="accordion-panel" aria-label="Ilustración abstracta de acordeón y juego musical">
+          <div class="buttons" aria-hidden="true">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+          <div class="screen">
+            <div>
+              <strong>Juego musical</strong>
+              <h3>1 rola lista para jugar</h3>
+            </div>
+            <div class="song-slots" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+          </div>
+          <div class="bellows" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="incluye">
+      <div class="inner">
+        <p class="eyebrow">Alcance incluido</p>
+        <h2>Lo necesario para publicar el efecto con claridad.</h2>
+        <p class="section-lead">El proyecto se concentra en entregar un filtro funcional y atractivo, con una canción integrada a la dinámica y una experiencia pensada para TikTok.</p>
+        <div class="deliverable-grid">
+          <article class="deliverable-card"><span>01</span><h3>Diseño visual</h3><p>Estética norteña con acordeón, botones y códigos regionales adaptados al formato TikTok.</p></article>
+          <article class="deliverable-card"><span>02</span><h3>Dinámica jugable</h3><p>Interacción simple para que el filtro se sienta como juego.</p></article>
+          <article class="deliverable-card"><span>03</span><h3>Una canción</h3><p>Integración de una canción autorizada dentro de la experiencia del filtro.</p></article>
+          <article class="deliverable-card"><span>04</span><h3>Desarrollo de efecto</h3><p>Construcción del filtro-juego para el flujo de publicación de TikTok.</p></article>
+          <article class="deliverable-card"><span>05</span><h3>Una ronda de ajustes</h3><p>Incluye una ronda de cambios sobre la primera versión presentada.</p></article>
+          <article class="deliverable-card"><span>06</span><h3>Entrega final</h3><p>El filtro puede quedar listo en 20 días hábiles aproximados a partir de la aprobación y materiales completos.</p></article>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section" id="condiciones">
+      <div class="inner">
+        <p class="eyebrow">Condiciones comerciales</p>
+        <h2>Una cotización clara para aprobar y arrancar.</h2>
+        <div class="terms-grid">
+          <article class="term"><span>Inversión total</span><h3>$17,000.00 MXN + IVA</h3><p>Diseño, desarrollo y entrega del filtro-juego para TikTok.</p></article>
+          <article class="term"><span>Formato</span><h3>Filtro-juego TikTok</h3><p>Experiencia con interacción simple, pensada para móvil y uso social.</p></article>
+          <article class="term"><span>Canción</span><h3>1 canción incluida</h3><p>El cliente deberá entregar la canción y autorización de uso dentro del filtro.</p></article>
+          <article class="term"><span>Ajustes</span><h3>1 ronda incluida</h3><p>Incluye una ronda de cambios sobre la primera versión presentada.</p></article>
+          <article class="term"><span>Tiempo</span><h3>20 días hábiles aproximados</h3><p>Contados desde la aprobación de la cotización y recepción de materiales completos.</p></article>
+          <article class="term"><span>Vigencia</span><h3>15 días naturales</h3><p>La cotización queda sujeta a disponibilidad de agenda y materiales.</p></article>
+          <article class="term"><span>No incluye</span><h3>Pauta ni licencias externas</h3><p>No contempla medios pagados, fees de plataformas, licencias de música, assets de terceros ni cambios mayores fuera del alcance aprobado.</p></article>
+          <article class="term"><span>Requisitos</span><h3>Materiales aprobados</h3><p>Believe deberá compartir canción, referencias, lineamientos y cualquier asset necesario para producción.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta" id="siguiente-paso">
+      <div class="inner">
+        <div class="cta-box">
+          <div>
+            <p class="eyebrow">Siguiente paso</p>
+            <h2>Aprobar la cotización y mandar la canción.</h2>
+            <p>Con la aceptación y materiales completos, iniciamos producción para entregar el filtro-juego de GRUPO SECRETTO en 20 días hábiles aproximados.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner"><span>Believe × WeSpeak · GRUPO SECRETTO</span><span>Cotización confidencial · Septiembre 2026</span></div>
+  </footer>
+</body>
+</html>
